@@ -1,0 +1,66 @@
+@import '../header.scss';
+
+.logPanel-wrap{
+    height: 100%;
+    .logPanel-wrap{
+        height: 100%;
+        .container{
+            margin: 50px 0;
+        }
+        
+        
+    }
+}
+
+
+
+.panel-container{
+    padding: 15px 0 20px 0;
+    .row{
+        .panel-links{
+            display: flex;
+            justify-content: space-between;
+            border-right: 1px solid #3c3c3c;
+            align-items: center;
+            margin-right: 10px;
+            a{
+               @include customHeaderLinks;
+            }
+        }
+    }
+}
+.panel-tel{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+   
+    p{
+        @include customHeaderLinks;
+        color: white;
+      
+    }
+}
+
+.b{
+    border: 1px solid red;
+   
+}
+.icon-tel{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+.dropdown-btn {
+
+    @include customHeaderLinks;
+    color: white !important;
+}
+.active{
+    display: block !important;
+}
+.dropdown-menu{
+
+}
+.dropdown-item{
+    text-align: center !important;
+}

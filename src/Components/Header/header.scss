@@ -1,0 +1,82 @@
+.header{
+    .header-wrap{
+        height: 100%;
+        background-color: #191919;
+    }
+}
+
+@mixin customHeaderLinks{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    text-shadow: 1px 1px #191919;
+    text-transform: uppercase;
+    color: #777;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header-items{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    img{
+        padding: 30px 50px 50px 0;
+    }
+    .header-controls{
+        padding: 30px 50px 50px 0;
+        .control-row1 a{
+            @include customHeaderLinks;
+            color: white;
+            &:hover{
+                color: #e61638;
+            }
+        }
+    }
+}
+.control-input{
+    display: inline-block;
+    // padding: 14px 65px 14px 13px;
+    height: 51px;
+    color: #fff;
+    // border-color: #3c3c3c;
+    border: 1px solid #3c3c3c;
+    background: #262626;
+    min-width: 265px;
+}
+.control-sub{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 105px;
+    height: 51px;
+    text-align: center;
+    padding: 0 5px;
+    text-shadow: 1px 1px rgba(0,0,0,.22);
+    text-transform: uppercase;
+    background: #303030;
+    border: 1px solid #3c3c3c;
+    border-left: 0px;
+    &:hover{
+      background-color: #e61638;
+    }
+}
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+}
+.control-chart{
+    background-color: #e61638;
+}
+.cart-res{
+    display: inline-block;
+    min-width: 300px;
+    background-color: #3c3c3c;
+    height: 76px;
+}
