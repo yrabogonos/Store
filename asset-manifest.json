@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/Store/static/css/main.285ead64.css",
-    "main.js": "/Store/static/js/main.a25e2a91.js",
+    "main.css": "/Store/static/css/main.39266d95.css",
+    "main.js": "/Store/static/js/main.19b15cf8.js",
     "static/js/787.884e199e.chunk.js": "/Store/static/js/787.884e199e.chunk.js",
+    "static/media/slide1.webp": "/Store/static/media/slide1.d2190bf44d87c0ec87b9.webp",
+    "static/media/slide2.webp": "/Store/static/media/slide2.eefee7c5e1ded92d1ece.webp",
+    "static/media/slide3.webp": "/Store/static/media/slide3.68a6d7864dd040d25d70.webp",
+    "static/media/link6.avif": "/Store/static/media/link6.c566bd1bda404371001e.avif",
+    "static/media/f2.avif": "/Store/static/media/f2.713826760b650d77d686.avif",
+    "static/media/link3.avif": "/Store/static/media/link3.5265210af8eac643e3e6.avif",
+    "static/media/link4.avif": "/Store/static/media/link4.7f656a5bc54507df2d61.avif",
+    "static/media/link5.avif": "/Store/static/media/link5.e929562a77b24abb2314.avif",
+    "static/media/link2.avif": "/Store/static/media/link2.47a150d33135c7c712f0.avif",
+    "static/media/link1.avif": "/Store/static/media/link1.a27bc5d2ac48daca0311.avif",
+    "static/media/f3.avif": "/Store/static/media/f3.e79e798b506aab37ff5b.avif",
+    "static/media/f1.avif": "/Store/static/media/f1.9b7003bad602d73679f2.avif",
     "index.html": "/Store/index.html",
-    "main.285ead64.css.map": "/Store/static/css/main.285ead64.css.map",
-    "main.a25e2a91.js.map": "/Store/static/js/main.a25e2a91.js.map",
+    "main.39266d95.css.map": "/Store/static/css/main.39266d95.css.map",
+    "main.19b15cf8.js.map": "/Store/static/js/main.19b15cf8.js.map",
     "787.884e199e.chunk.js.map": "/Store/static/js/787.884e199e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.285ead64.css",
-    "static/js/main.a25e2a91.js"
+    "static/css/main.39266d95.css",
+    "static/js/main.19b15cf8.js"
   ]
 }
