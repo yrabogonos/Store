@@ -1,0 +1,64 @@
+.fcard-container{
+    padding: 15px;
+    border: 1px solid #d9d9d9;
+    padding: 10px 18px 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.fcard{
+    flex: 1 1 32%;
+    margin-bottom: 20px;
+}
+.fcard-price{
+    font-size: 26px;
+    font-weight: 900;
+    color: #e61638;
+}
+.fcard-title{
+    font-weight: 700;
+    font-size: 16px;
+    color: #262626;
+    text-decoration: none;
+}
+.fcard-text{
+    font-size: 13px;
+    color: #777;
+
+}
+.fcard-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.fcard-btn{
+    width: 100%;
+    border-radius: 0;
+    background: #e61638;
+    color: #fff;
+    border: none;
+    display: block;
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 900;
+    text-shadow: 1px 1px rgba(0,0,0,.22);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    p{
+        display: inline-block;
+        margin: 0 auto !important;
+    }
+    &:hover{
+        background-color:#262626;
+        color: #e61638;
+    }
+}
+.ficon-cart{
+    width:65px;
+    height:65px;
+    background-color: #262626;
+    padding: 15px;
+   
+}
