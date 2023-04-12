@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/Store/static/css/main.ef848cbb.css",
-    "main.js": "/Store/static/js/main.b01b0e84.js",
+    "main.css": "/Store/static/css/main.927d7e9d.css",
+    "main.js": "/Store/static/js/main.97ceb733.js",
     "static/js/787.884e199e.chunk.js": "/Store/static/js/787.884e199e.chunk.js",
     "static/media/slide1.webp": "/Store/static/media/slide1.d2190bf44d87c0ec87b9.webp",
     "static/media/slide2.webp": "/Store/static/media/slide2.eefee7c5e1ded92d1ece.webp",
     "static/media/slide3.webp": "/Store/static/media/slide3.68a6d7864dd040d25d70.webp",
+    "static/media/apollo_precision_tools_dt9706p_39-piece_pink_general_tool_set_3_6499b9f2-0a47-4cab-bb46-b72b159f0aee_medium.avif": "/Store/static/media/apollo_precision_tools_dt9706p_39-piece_pink_general_tool_set_3_6499b9f2-0a47-4cab-bb46-b72b159f0aee_medium.858b062039d54fe65b80.avif",
     "static/media/link6.avif": "/Store/static/media/link6.c566bd1bda404371001e.avif",
     "static/media/f2.avif": "/Store/static/media/f2.713826760b650d77d686.avif",
+    "static/media/black___decker_bdcdmt120_20-volt_matrix_drill__1_medium.avif": "/Store/static/media/black___decker_bdcdmt120_20-volt_matrix_drill__1_medium.ce604d8937e23c239572.avif",
     "static/media/link3.avif": "/Store/static/media/link3.5265210af8eac643e3e6.avif",
     "static/media/link4.avif": "/Store/static/media/link4.7f656a5bc54507df2d61.avif",
     "static/media/link5.avif": "/Store/static/media/link5.e929562a77b24abb2314.avif",
     "static/media/link2.avif": "/Store/static/media/link2.47a150d33135c7c712f0.avif",
     "static/media/link1.avif": "/Store/static/media/link1.a27bc5d2ac48daca0311.avif",
     "static/media/f3.avif": "/Store/static/media/f3.e79e798b506aab37ff5b.avif",
+    "static/media/tekton_2902_power_driver_extension_socket_adapter_set_3_medium.avif": "/Store/static/media/tekton_2902_power_driver_extension_socket_adapter_set_3_medium.479cca1de6ebe22049ac.avif",
     "static/media/f1.avif": "/Store/static/media/f1.9b7003bad602d73679f2.avif",
     "index.html": "/Store/index.html",
-    "main.ef848cbb.css.map": "/Store/static/css/main.ef848cbb.css.map",
-    "main.b01b0e84.js.map": "/Store/static/js/main.b01b0e84.js.map",
+    "main.927d7e9d.css.map": "/Store/static/css/main.927d7e9d.css.map",
+    "main.97ceb733.js.map": "/Store/static/js/main.97ceb733.js.map",
     "787.884e199e.chunk.js.map": "/Store/static/js/787.884e199e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef848cbb.css",
-    "static/js/main.b01b0e84.js"
+    "static/css/main.927d7e9d.css",
+    "static/js/main.97ceb733.js"
   ]
 }
