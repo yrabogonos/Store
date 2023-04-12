@@ -1,5 +1,6 @@
 import React from 'react';
 import './aside.scss';
+import { Link } from 'react-router-dom';
 
 
 function Aside(props){
@@ -8,9 +9,10 @@ function Aside(props){
             <div className="aside-wrap">
                <h2 className='category-name'>Categories</h2>
                <ul className='aside-cat p-0'>
-                    <li><a href="#t">Bare tools</a></li>
-                    <li><a href="#t">dust collectors</a></li>
-                    <li><a href="#t">electrician tools</a></li>
+                    {/* <li><a href="#t">Bare tools</a></li> */}
+                    <li>{<Link to={'/collections/baretools'}>Bare tools</Link>}</li>
+                    <li>{<Link to={'/collections/dustcollectors'}>Dust collectors</Link>}</li>
+                    <li>{<Link to={'/collections/electriciantools'}>electrician tools</Link>}</li>
                     <li><a href="#t">hand tools</a></li>
                     <li><a href="#t">lasers</a></li>
                     <li><a href="#t">plumbing tools</a></li>

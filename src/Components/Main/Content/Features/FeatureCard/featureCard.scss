@@ -5,9 +5,12 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+ 
 }
+
 .fcard{
-    flex: 1 1 32%;
+    display: flex;
+    flex: 0 1 32%;
     margin-bottom: 20px;
 }
 .fcard-price{
@@ -24,12 +27,17 @@
 .fcard-text{
     font-size: 13px;
     color: #777;
+    flex-grow: 1;
 
 }
 .fcard-img{
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+        height: 240px;
+        width: 240px;
+    }
    
 }
 .fcard-btn{

@@ -3,6 +3,7 @@ import './main.scss';
 import Aside from './Aside/aside';
 import Content from './Content/content';
 
+
 function Main(props){
     return(
         <section className='main'>
@@ -11,6 +12,7 @@ function Main(props){
                     
                     <Aside />
                     <Content />
+                   
                     
                 </div>
             </div>
