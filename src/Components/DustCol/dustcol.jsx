@@ -5,6 +5,7 @@ import iconLeft from '../../assets/icons/left-arrow.png';
 import {Link} from 'react-router-dom';
 import ProductList from '../ProductList/ProductList';
 import dust from '../../assets/img/tekton_2902_power_driver_extension_socket_adapter_set_3_medium.avif';
+import BreadCrumbs from '../breadcrumbs/breadcrumbs';
 
 
 function DustCollectors(props){
@@ -12,7 +13,7 @@ function DustCollectors(props){
         <section className="baretools">
         <div className="baretools-wrap">
             <div className="container">
-                <Link to={'/'}><div className="navigation mb-5"><img src={iconLeft} alt="icon" /> <span>Home</span></div></Link>
+                <BreadCrumbs />
                 <div className="d-flex gap-5">
                     <Aside />
                     <div className="baretools-content">

@@ -1,12 +1,11 @@
 import React from 'react';
-import './eltools.scss';
 import Aside from '../Main/Aside/aside';
 import ProductList from '../ProductList/ProductList';
-import el from '../../assets/img/black___decker_bdcdmt120_20-volt_matrix_drill__1_medium.avif';
+import safety from '../../assets/img/safety.avif';
 import BreadCrumbs from '../breadcrumbs/breadcrumbs';
 
 
-function ElTools(props){
+function Safety(props){
     return(
         <section className="baretools">
         <div className="baretools-wrap">
@@ -15,17 +14,17 @@ function ElTools(props){
                 <div className="d-flex gap-5">
                     <Aside />
                     <div className="baretools-content">
-                        <h3 className='features-title baretools-title mb-5'>Electrician Tools</h3> 
+                        <h3 className='features-title baretools-title mb-5'>Safety Equipment</h3> 
                         <div className="baretools-filters d-flex gap-1 mb-4">
                             <button className='active filter'>All</button>
                             <button className='filter'>Sit amet</button>
                         </div>
                         <div className="baretools-info d-flex gap-5 mb-5">
-                            <img src={el} alt="electriciantools" />
-                            <p>You know that nowadays we have faced with the problem of fakes. It is so easy to become a victim of cheaters. These processes are very widespread and even big companies` reputation could suffer because of fakes. But our vendors and manufactures guarantee the highest quality of our products. There is no doubt that we are the leading company in this sphere. Keep saving your money with our store!</p>
+                            <img src={safety} alt="handtools" />
+                            <p>We assure you that our goods have a great number of advantages and it is very important for the customers. Our products are the real bestsellers because they have numerous devoted clients all over the country and as you know - those positive testimonials are the best advertising. This fact proves that our company takes the leading place among the competing ones.</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Electrician Tools'/>
+                            <ProductList category='Hand Tool'/>
                         </div>
                     </div>
                 </div>
@@ -34,4 +33,4 @@ function ElTools(props){
     </section>
     );
 }
-export default ElTools;
+export default Safety;

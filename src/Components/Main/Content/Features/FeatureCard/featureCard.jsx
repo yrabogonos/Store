@@ -13,10 +13,10 @@ function FeatureCard(props){
             <div className="fcard-wrap d-flex">
                 <div className="fcard-container">
                     <div className="fcard-img">
-                        <Link to={`/productDetails/${props.data.id}`} ><img src={props.data.img} alt='d' className='mb-5'/></Link>
+                        <Link to={`./${props.data.id}`} ><img src={props.data.img} alt='d' className='mb-5'/></Link>
                     </div>
                     <div className="fcard-price">{props.data.price}</div>
-                    <Link to={`/productDetails/${props.data.id}`} className='fcard-title mb-2' href='#f'>{props.data.title}</Link>
+                    <Link to={`productDetails/${props.data.id}`} className='fcard-title mb-2' href='#f'>{props.data.title}</Link>
                     <p className='fcard-text mb-3'>{props.data.text}</p>
                     <button class="btn fcard-btn p-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
                     fill='white'

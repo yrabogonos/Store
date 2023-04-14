@@ -2,6 +2,7 @@ import React from 'react';
 import './main.scss';
 import Aside from './Aside/aside';
 import Content from './Content/content';
+import { Outlet } from 'react-router-dom';
 
 
 function Main(props){
@@ -16,6 +17,7 @@ function Main(props){
                     
                 </div>
             </div>
+            <Outlet />
         </section>
     );
 }

@@ -1,15 +1,12 @@
 import React from 'react';
-import './bare.scss';
+import './handtools.scss';
 import Aside from '../Main/Aside/aside';
-import iconLeft from '../../assets/icons/left-arrow.png';
-import {Link, Outlet} from 'react-router-dom';
 import ProductList from '../ProductList/ProductList';
 import apollo from '../../assets/img/apollo_precision_tools_dt9706p_39-piece_pink_general_tool_set_3_6499b9f2-0a47-4cab-bb46-b72b159f0aee_medium.avif';
 import BreadCrumbs from '../breadcrumbs/breadcrumbs';
 
 
-
-function BareTools(props){
+function HandTools(props){
     return(
         <section className="baretools">
         <div className="baretools-wrap">
@@ -18,17 +15,17 @@ function BareTools(props){
                 <div className="d-flex gap-5">
                     <Aside />
                     <div className="baretools-content">
-                        <h3 className='features-title baretools-title mb-5'>Bare Tools</h3> 
-                        <div className="baretools-filters d-flex gap-1 mb-5">
+                        <h3 className='features-title baretools-title mb-5'>Hand Tools</h3> 
+                        <div className="baretools-filters d-flex gap-1 mb-4">
                             <button className='active filter'>All</button>
                             <button className='filter'>Sit amet</button>
                         </div>
                         <div className="baretools-info d-flex gap-5 mb-5">
-                            <img src={apollo} alt="baretools" />
-                            <p>This fact proves that our company takes the leading place among the competing ones. You know that nowadays we have faced with the problem of fakes. It is so easy to become a victim of cheaters. These processes are very widespread and even big companies` reputation could suffer because of fakes. But our vendors and manufactures guarantee the highest quality of our products.</p>
+                            <img src={apollo} alt="handtools" />
+                            <p>We assure you that our goods have a great number of advantages and it is very important for the customers. Our products are the real bestsellers because they have numerous devoted clients all over the country and as you know - those positive testimonials are the best advertising. This fact proves that our company takes the leading place among the competing ones.</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Bare Tools'/>
+                            <ProductList category='Hand Tool'/>
                         </div>
                     </div>
                 </div>
@@ -37,4 +34,4 @@ function BareTools(props){
     </section>
     );
 }
-export default BareTools;
+export default HandTools;

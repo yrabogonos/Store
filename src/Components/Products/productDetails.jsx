@@ -1,17 +1,21 @@
-import React, { useDebugValue, useEffect, useState } from 'react';
+import React, { useDebugValue, useEffect, useState, useRef } from 'react';
 import './productDetails.scss';
 import { useParams } from 'react-router-dom';
 import Aside from '../Main/Aside/aside';
-import iconLeft from '../../assets/icons/left-arrow.png';
-import { redirect, Link} from 'react-router-dom';
+import BreadCrumbs from '../breadcrumbs/breadcrumbs';
+import loading from '../../assets/img/loading-33.gif';
 
 function ProductsDetails(props){
     let {productId} = useParams();
     const [product, SetProduct] = useState(0);
+    const [IsLoaded, SetLoadStatus] = useState(false);
+    const loadref = useRef();
+    const inforef = useRef();
     useEffect(()=>{
         let req = new XMLHttpRequest();
         req.onreadystatechange = () => {
           if (req.readyState == XMLHttpRequest.DONE) {
+            SetLoadStatus(true);
             var data = JSON.parse(req.responseText)['record']['products'];
             for(let i = 0; i < data.length; i++){
                 if(data[i].id === productId){
@@ -27,11 +31,12 @@ function ProductsDetails(props){
         <section className='products'>
             <div className="products-wrap">
                 <div className="container">
-                    <Link to={'/'}><div className="navigation mb-5"><img src={iconLeft} alt="icon" /> <span>Home</span></div></Link>
+                    <BreadCrumbs />
                     <div className="d-flex">
                         <Aside />
                         <div className="product-info">
-                            <div className="row d-flex g-3">
+                            {IsLoaded === true? inforef.current.classList.remove('none'):<figure className='figure-gif'><img src={loading} ref={loadref} className='dblock' /></figure>}
+                            <div ref={inforef} className="row d-flex g-3 none">
                                 <div className="col-lg-5 col-md-5 col-12 mb-sm-5">
                                     <div className="product-img">
                                         <img src={product.img} className='' alt="product" />
@@ -64,7 +69,6 @@ function ProductsDetails(props){
                     
                 </div>
             </div>
-            
         </section>
     );
 }
