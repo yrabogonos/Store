@@ -12,7 +12,7 @@ function Main(props){
                 <div className="container d-flex gap-5 p-0">
                     
                     <Aside />
-                    <Content />
+                    <Content add={props.add}/>
                    
                     
                 </div>

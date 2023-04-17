@@ -24,7 +24,7 @@ function Lasers(props){
                             <p>But our vendors and manufactures guarantee the highest quality of our products. There is no doubt that we are the leading company in this sphere. We observe only branded commodities policy. You can buy the premium quality goods at a fair price. Our company cares about the clients and never lets them down. We are the constant participants of different social and technological researches.</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Lasers'/>
+                            <ProductList add={props.add} category='Lasers'/>
                         </div>
                     </div>
                 </div>

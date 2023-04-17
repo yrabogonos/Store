@@ -35,7 +35,7 @@ function ProductList(props){
             <div className="productlist-wrapper d-flex gap-3">
                 {IsLoaded === true? console.log(1):<figure className='figure-gif'><img src={loading} ref={loadref} className='dblock' /></figure>}
                
-                {products.map(f => <FeatureCard data={f}/>)}
+                {products.map(f => <FeatureCard add={props.add} data={f}/>)}
             </div>
            
         </section>

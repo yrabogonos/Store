@@ -11,7 +11,7 @@ function Content(props){
             <div className="content-wrap">
                 <Carousell />
                 <Types />
-                <Features />
+                <Features add={props.add}/>
             </div>
         </section>
     );

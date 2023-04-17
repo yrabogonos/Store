@@ -14,92 +14,136 @@ import PlumbingTools from './Components/Plumbing/plumbing';
 import PowerTools from './Components/Power/powertools';
 import Safety from './Components/Safety/safety';
 import SpecialtyTools from './Components/Speciality/spec';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [orders, SetOrders] = useState([]);
+  const [flag, Setflag] = useState(true);
+  const [total, SetTotal] = useState(0);
+
+  const changeOrder = function(){
+    console.log('From ch', orders);
+    let t=0;
+    for(let i = 0; i < orders.length; i++){
+      t+=orders[i].q;
+    }
+    SetTotal(t);
+    
+  }
+
+
+  const addOrder = function(item){
+    for(let i=0; i<orders.length; i++){
+      if(orders[i].title === item.title){
+        alert('Товар уже знаходиться в корзині!');
+        return;
+      }
+    }
+    alert('Товар добавлено в корзину');
+    SetOrders([...orders, item]);
+    
+  }
+
+
+  const remOrder = function(title){
+      for(let i = 0; i < orders.length; i++){
+        if(orders[i].title === title){
+          SetOrders(orders.filter(el => el.title!=title))
+        }
+      }
+  }
+  
+  useEffect(()=>{
+    let t=0;
+    for(let i=0; i<orders.length; i++){
+        t+=orders[i].q * (parseFloat(orders[i].price.slice(1)));
+    }
+    SetTotal(((parseInt(t * 100)) / 100)); 
+})
   return (
     <div className="root-wrap">
-       <Header />
+       <Header ch={changeOrder} t={total}  orders={orders} rem={remOrder}/>
         <Routes>
 
           <Route path='/:productId' element={ 
-            <ProductsDetails />
+            <ProductsDetails ch={changeOrder} add={addOrder}/>
           }></Route> 
 
           <Route path='/baretools' element={ 
-            <BareTools />
+            <BareTools add={addOrder}/>
           }>
           </Route>
 
           <Route path='/baretools/:productId' element={ 
-                <ProductsDetails />
+                <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/dustcollectors' element={ 
-            <DustCollectors />
+            <DustCollectors add={addOrder}/>
           }></Route>
 
           <Route path='/dustcollectors/:productId' element={ 
-                <ProductsDetails />
+                <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/electriciantools' element={ 
-            <ElTools />
+            <ElTools add={addOrder}/>
           }></Route>
 
           <Route path='/electriciantools/:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/handtools' element={ 
-            <HandTools />
+            <HandTools add={addOrder}/>
           }></Route>
 
           <Route path='/handtools/:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/lasers' element={ 
-            <Lasers />
+            <Lasers add={addOrder}/>
           }></Route>
 
           <Route path='/lasers/:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/plumbingtools' element={ 
-            <PlumbingTools />
+            <PlumbingTools add={addOrder}/>
           }></Route>
 
           <Route path='/plumbingtools/:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/powertools' element={ 
-            <PowerTools />
+            <PowerTools add={addOrder}/>
           }></Route>
 
           <Route path='/powertools:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/safetyequipment' element={ 
-            <Safety />
+            <Safety add={addOrder}/>
           }></Route>
 
           <Route path='/safetyequipment:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
   
           <Route path='/specialitytools' element={ 
-            <SpecialtyTools />
+            <SpecialtyTools add={addOrder}/>
           }></Route>
 
           <Route path='/specialitytools:productId' element={ 
-              <ProductsDetails />
+              <ProductsDetails add={addOrder}/>
           }></Route> 
 
           <Route path='/' element={ 
-            <Main />
+            <Main add={addOrder}/>
           }></Route>
         </Routes>
         <Footer />
@@ -107,5 +151,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

@@ -25,7 +25,7 @@ function HandTools(props){
                             <p>We assure you that our goods have a great number of advantages and it is very important for the customers. Our products are the real bestsellers because they have numerous devoted clients all over the country and as you know - those positive testimonials are the best advertising. This fact proves that our company takes the leading place among the competing ones.</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Hand Tool'/>
+                            <ProductList add={props.add} category='Hand Tools'/>
                         </div>
                     </div>
                 </div>

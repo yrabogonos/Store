@@ -28,7 +28,7 @@ function BareTools(props){
                             <p>This fact proves that our company takes the leading place among the competing ones. You know that nowadays we have faced with the problem of fakes. It is so easy to become a victim of cheaters. These processes are very widespread and even big companies` reputation could suffer because of fakes. But our vendors and manufactures guarantee the highest quality of our products.</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Bare Tools'/>
+                            <ProductList add={props.add} category='Bare Tools'/>
                         </div>
                     </div>
                 </div>

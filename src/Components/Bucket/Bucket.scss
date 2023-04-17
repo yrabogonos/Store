@@ -1,0 +1,71 @@
+.bucket{
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    // bottom: -140px;
+    top: 100%;
+    z-index: 2;
+    .bucket-wrap{
+        overflow: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        color: black;
+        background-color: #fafafa;
+        box-shadow: 4px 5px 15px -7px #606060;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        .empty-bucket{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            text-align: left;
+            font-size: 18px;
+            padding: 10px 0px;
+        }
+        .bucket-title{
+            border-bottom: 1px solid #606060;
+        }
+    }
+}
+.red{
+    color: red;
+}
+.bitem{
+    padding: 20px 10px;
+    border-bottom: 1px solid #606060;
+}
+.bitem-img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+}
+.bitem-desct{
+    flex-basis: 40%;
+    p{
+        font-size: 12px;
+    }
+}
+.bitem-input{
+    width: 30px;
+    text-align: center;
+}
+.bitem-btn{
+    text-align: center;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+.bitem-price{
+    color: green;
+}
+.bitem-delbtn{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}

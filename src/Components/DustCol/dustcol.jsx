@@ -27,7 +27,7 @@ function DustCollectors(props){
                             <p>Our products are the real bestsellers because they have numerous devoted clients all over the country and as you know - those positive testimonials are the best advertising. This fact proves that our company takes the leading place among the competing ones. You know that nowadays we have faced with the problem of fakes. It is so easy to become a victim of cheaters.</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Dust Collectors'/>
+                            <ProductList add={props.add} category='Dust Collectors'/>
                         </div>
                     </div>
                 </div>

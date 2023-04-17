@@ -26,7 +26,7 @@ function Features(props){
            <div className="features-wrap">
                 <h3 className='features-title mb-5'>Featured Products</h3>
                 <div className="features-items">
-                    {features.map(f => <FeatureCard data={f}/>)}
+                    {features.map(f => <FeatureCard add={props.add} data={f}/>)}
                 </div>
             </div> 
        </section>

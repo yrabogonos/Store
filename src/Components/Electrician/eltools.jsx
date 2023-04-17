@@ -25,7 +25,7 @@ function ElTools(props){
                             <p>You know that nowadays we have faced with the problem of fakes. It is so easy to become a victim of cheaters. These processes are very widespread and even big companies` reputation could suffer because of fakes. But our vendors and manufactures guarantee the highest quality of our products. There is no doubt that we are the leading company in this sphere. Keep saving your money with our store!</p>
                         </div>
                         <div className="product-items">
-                            <ProductList category='Electrician Tools'/>
+                            <ProductList add={props.add} category='Electrician Tools'/>
                         </div>
                     </div>
                 </div>
