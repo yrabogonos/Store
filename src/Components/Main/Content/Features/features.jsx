@@ -4,6 +4,9 @@ import FeatureCard from './FeatureCard/featureCard';
 import img1 from '../../../../assets/img/f1.avif';
 import img2 from '../../../../assets/img/f2.avif';
 import img3 from '../../../../assets/img/f3.avif';
+import StoreContext from '../../../../StoreContext';
+import { addItemActionCreator, updateItemActionCreator} from '../../../../Redux/cartReducer';
+
 
 
 
@@ -22,15 +25,32 @@ function Features(props){
         req.send();
     }, []);
     return(
-       <section className='features mt-5 mb-5'>
-           <div className="features-wrap">
-                <h3 className='features-title mb-5'>Featured Products</h3>
-                <div className="features-items">
-                    {features.map(f => <FeatureCard data={f}/>)}
-                </div>
-            </div> 
-       </section>
+      <StoreContext.Consumer>
+        {
+            (store) =>{
+                let state = store.getState();
+                let addItem = (item) => {
+                    store.dispatch(addItemActionCreator(item));
+                }
+                let updateItem = (item) => {
+                    store.dispatch(updateItemActionCreator(item));
+                }
+                return(
+                  <section className='features mt-5 mb-5'>
+                      <div className="features-wrap">
+                           <h3 className='features-title mb-5'>Featured Products</h3>
+                           <div className="features-items">
+                               {features.map(f => <FeatureCard data={f} addItem={addItem} updateItem={updateItem} items={state.cart.items} newItem={state.cart.newItem}/>)}
+                           </div>
+                       </div> 
+                  </section>
+               );
+            }
+           
+        }
+      </StoreContext.Consumer>
     );
+   
 }
 
 
