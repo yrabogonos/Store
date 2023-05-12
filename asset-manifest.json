@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Store/static/css/main.1e5f3de4.css",
-    "main.js": "/Store/static/js/main.a3984ad9.js",
+    "main.css": "/Store/static/css/main.453d7fdd.css",
+    "main.js": "/Store/static/js/main.3a2af40e.js",
     "static/js/787.884e199e.chunk.js": "/Store/static/js/787.884e199e.chunk.js",
     "static/media/slide1.webp": "/Store/static/media/slide1.d2190bf44d87c0ec87b9.webp",
     "static/media/slide2.webp": "/Store/static/media/slide2.eefee7c5e1ded92d1ece.webp",
@@ -24,12 +24,12 @@
     "static/media/dewalt_dw920k-2_2_medium.avif": "/Store/static/media/dewalt_dw920k-2_2_medium.7ea711b845b0ae92c437.avif",
     "static/media/f1.avif": "/Store/static/media/f1.9b7003bad602d73679f2.avif",
     "index.html": "/Store/index.html",
-    "main.1e5f3de4.css.map": "/Store/static/css/main.1e5f3de4.css.map",
-    "main.a3984ad9.js.map": "/Store/static/js/main.a3984ad9.js.map",
+    "main.453d7fdd.css.map": "/Store/static/css/main.453d7fdd.css.map",
+    "main.3a2af40e.js.map": "/Store/static/js/main.3a2af40e.js.map",
     "787.884e199e.chunk.js.map": "/Store/static/js/787.884e199e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e5f3de4.css",
-    "static/js/main.a3984ad9.js"
+    "static/css/main.453d7fdd.css",
+    "static/js/main.3a2af40e.js"
   ]
 }
