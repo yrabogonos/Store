@@ -9,15 +9,15 @@ function Aside(props){
             <div className="aside-wrap">
                <h2 className='category-name'>Categories</h2>
                <ul className='aside-cat p-0'>
-                    <li>{<Link to={'/baretools'}>Bare tools</Link>}</li>
-                    <li>{<Link to={'/dustcollectors'}>Dust collectors</Link>}</li>
-                    <li>{<Link to={'/electriciantools'}>electrician tools</Link>}</li>
-                    <li>{<Link to={'/handtools'}>hand tools</Link>}</li>
-                    <li>{<Link to={'/lasers'}>lasers</Link>}</li>
-                    <li>{<Link to={'/plumbingtools'}>plumbing tools</Link>}</li>
-                    <li>{<Link to={'/powertools'}>power tools</Link>}</li>
-                    <li>{<Link to={'/safetyequipment'}>safety equipment</Link>}</li>
-                    <li>{<Link to={'/specialitytools'}>speciality tools</Link>}</li>
+                    <Link to={'/baretools'}><li>Bare tools</li></Link>
+                    <Link to={'/dustcollectors'}><li>Dust collectors</li></Link>
+                    <Link to={'/electriciantools'}><li>electrician tools</li></Link>
+                    <Link to={'/handtools'}><li>hand tools</li></Link>
+                    <Link to={'/lasers'}><li>lasers</li></Link>
+                    <Link to={'/plumbingtools'}><li>plumbing tools</li></Link>
+                    <Link to={'/powertools'}><li>power tools</li></Link>
+                    <Link to={'/safetyequipment'}><li>safety equipment</li></Link>
+                    <Link to={'/specialitytools'}><li>speciality tools</li></Link>
                </ul>
             </div>
         </aside>

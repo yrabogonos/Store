@@ -1,0 +1,134 @@
+@import '../Header/header.scss';
+
+.contactus-container{
+    position: fixed;
+    z-index: 3;
+}
+
+.contact-form{
+    display: none;
+    width: 400px;
+    background-color: #FFFFFF;
+    border: 1px solid #61D286;
+    position: fixed;
+    border-radius: 10px;
+    bottom: 0px;
+    right: 0px;
+    height: 600px;
+    transform: scale(0);
+    animation: scale-in 1s forwards;
+    overflow: hidden;
+    
+    .form-wrap{
+        height: 100%;
+        width: 100%;
+        .form-header{
+            padding: 20px;
+            background-color: #5ba0d0;
+            color: white;
+            h1{
+                font-size: 24px;
+            }
+        }
+        .form-body{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            .body-hint{
+                align-self: flex-end;
+            }
+        }
+    }
+}
+.tr{
+    background-color:green;
+    transform: scaleX(1) scaleY(1);
+}
+@keyframes scale-in {
+    from {
+      transform: scale(0);
+      bottom: -200px;
+      right: -100px;
+    }
+    to {
+      transform: scale(1);
+      bottom: 120px;
+      right: 30px;
+    }
+  }
+.contactus{
+    width: 170px;
+    background-color: #5ba0d0;
+    border-radius: 10%/50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px;
+    border: none;
+    z-index: 3;
+    align-items: center;
+    gap: 8px;
+    height: 60px;
+    transition: width 20ms ease-in;
+    border: 1px solid #61D286;
+    .contactus-icon{
+        width: 30px;
+        height: 30px;
+        
+    }
+    h2{
+        font-size: 18px;
+        color: white;
+    }
+    
+}
+.btnActive{
+    // transition: width 2s ease-in;
+    width: 60px !important;
+    border-radius: 30% !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after{
+        content: 'X';
+        color: white;
+        font-size: 30px;
+      
+    }
+}
+.body-inputs{
+    .input-el{
+        p{
+            font-size: 16px;
+            span{
+                color: $red;
+            }
+        }
+        input{
+            padding-left: 10px;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid #b1b1b1;
+            
+        }
+        textarea{
+            padding-left: 10px;
+            height: 120px;
+            border-radius: 10px;
+            border: 1px solid #b1b1b1;
+          
+        }
+    }
+    .input-submit{
+        width: 100%;
+        border-radius: 24px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        height: 45px;
+        border: none;
+        background-color: #61D286;
+        text-transform: uppercase;
+    }
+}

@@ -20,7 +20,7 @@ function BareTools(props){
                     <div className="baretools-content">
                         <h3 className='features-title baretools-title mb-5'>Bare Tools</h3> 
                         <div className="baretools-filters d-flex gap-1 mb-5">
-                            <button className='active filter'>All</button>
+                            <button className='activeBtn filter'>All</button>
                             <button className='filter'>Sit amet</button>
                         </div>
                         <div className="baretools-info d-flex gap-5 mb-5">

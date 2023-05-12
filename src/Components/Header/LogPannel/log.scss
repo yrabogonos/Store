@@ -62,3 +62,36 @@
 .dropdown-item{
     text-align: center !important;
 }
+.cur-title{
+    color: white;
+    margin: 0;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.dropdown-menu{
+    top: 100% !important;
+    right: 0 !important;
+}
+@media screen and (max-width:580px) {
+    .panel-links{
+        border-right: none !important;
+    }
+}
+@media screen and (max-width:410px) {
+    .panel-links{
+        border-right: none !important;
+        a{
+            font-size: 14px !important;
+        }
+    }
+    .panel-cur{
+        font-size: 14px !important;
+    }
+    .dropdown-btn{
+        font-size: 14px !important;
+    }
+    .panel-tel p{
+        font-size: 14px !important;
+    }
+}

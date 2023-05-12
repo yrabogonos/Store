@@ -3,6 +3,7 @@ const UPDATE_ITEM = 'UPDATE-ITEM';
 const REM_ITEM = 'REM_ITEM';
 const REM_ALL = 'REM_ALL';
 
+
 let initialState =  {
     items:[
         
@@ -74,5 +75,6 @@ export const removeAllActionCreator = () => {
         type: REM_ALL
     }
 }
+
 
 export default cartReducer;

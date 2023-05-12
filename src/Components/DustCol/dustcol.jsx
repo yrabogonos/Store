@@ -19,7 +19,7 @@ function DustCollectors(props){
                     <div className="baretools-content">
                         <h3 className='features-title baretools-title mb-5'>Dust Collectors</h3> 
                         <div className="baretools-filters d-flex gap-1 mb-2">
-                            <button className='active filter'>All</button>
+                            <button className='activeBtn filter'>All</button>
                             <button className='filter'>Sit amet</button>
                         </div>
                         <div className="baretools-info d-flex gap-5 mb-5">

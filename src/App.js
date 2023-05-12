@@ -14,9 +14,43 @@ import PlumbingTools from './Components/Plumbing/plumbing';
 import PowerTools from './Components/Power/powertools';
 import Safety from './Components/Safety/safety';
 import SpecialtyTools from './Components/Speciality/spec';
+import { useState } from 'react';
+import React from 'react';
+import { ContactUs } from './Components/ContactUs/contactus';
 
+export const CurContext = React.createContext();
 function App() {
+  const [selectedCur, SetselectedCur] = useState('USD');
+  const updateCur = function(cur){
+    switch (cur){
+      case 'USD':
+        SetselectedCur('USD');
+        break;
+      case 'EUR':
+        SetselectedCur('EUR');
+        break;
+      case 'GPB':
+        SetselectedCur('GPB');
+        break;
+        default:
+          SetselectedCur('USD');
+          break;
+    }
+     
+  }
+  const translateCur = (currency) =>{             // винеси в апку
+    if(currency ==='USD'){
+        return {m:1.0, sign:'$'};
+    }
+    if(currency==='EUR'){
+        return {m:1.1026501, sign:'€'};
+    }
+    if(currency ==='GPB'){
+        return {m:1.2494218, sign:'£'};
+    }
+}
   return (
+    <CurContext.Provider value={{cur:selectedCur,update:updateCur, translate:translateCur}}>
     <div className="root-wrap">
        <Header />
         <Routes>
@@ -102,9 +136,11 @@ function App() {
             <Main />
           }></Route>
         </Routes>
+        <ContactUs />
         <Footer />
 
     </div>
+    </CurContext.Provider>
   );
 }
 
