@@ -1,0 +1,16 @@
+.content{
+    flex: 0 1 70%;
+    z-index: 1;
+}
+.content-wrap{
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width:769px){
+    .content{
+        flex: 0 1 100%;
+      
+    }
+   
+}

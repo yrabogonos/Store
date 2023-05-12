@@ -1,32 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './log.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../scripts/dropdown';
+import { CurContext } from '../../../App';
 
 
 
 function LogPanel(props){
-    useEffect(()=>{
-        document.querySelectorAll('.dropdown-btn').forEach(btn => btn.addEventListener('click', (e) =>{
-            var target = e.currentTarget;
-            var menu = target.dataset.target; 
-            document.querySelectorAll('.dropdown-menu').forEach(e =>{
-                if(e.dataset.target == menu && !e.classList.contains('open')){
-                    e.classList.add('active');
-                    var id = setTimeout(()=> e.classList.add('open'), 0)
+    // useEffect(()=>{
+    //     document.querySelectorAll('.dropdown-btn').forEach(btn => btn.addEventListener('click', (e) =>{
+    //         var target = e.currentTarget;
+    //         var menu = target.dataset.target; 
+    //         document.querySelectorAll('.dropdown-menu').forEach(e =>{
+    //             if(e.dataset.target == menu && !e.classList.contains('open')){
+    //                 e.classList.add('active');
+    //                 var id = setTimeout(()=> e.classList.add('open'), 0)
                
-                }
-                if(e.dataset.target == menu && e.classList.contains('open')){
-                    e.classList.remove('active');
-                    clearTimeout(id);
-                    setTimeout(()=> e.classList.remove('open'), 0)
+    //             }
+    //             if(e.dataset.target == menu && e.classList.contains('open')){
+    //                 e.classList.remove('active');
+    //                 clearTimeout(id);
+    //                 setTimeout(()=> e.classList.remove('open'), 0)
                     
-                }
-            });
+    //             }
+    //         });
             
           
-        }));
-    });
+    //     }));
+    // });
 
     
     return(
@@ -34,23 +35,17 @@ function LogPanel(props){
             <div className='logPanel-wrap bg-dark'>
                 <div className='container panel-container'>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6 col-sm-12 panel-links">
+                        <div className="col-lg-4 col-md-6 col-sm-12 panel-links pr-2">
                             <a href="#a">log in</a>
                             <a href="#a">create an account</a>
                             <a href="#a">check out</a>
                         </div>
-                        <div className="col-lg-2 col-md-2 col-sm-12 mt-sm-1  panel-cur">
-                            <div className="dropdown">
-                                <button data-target='cur' className='btn dropdown-btn dropdown-toggle p-0'>Currencies:</button>
-                                <ul data-target='cur' className='dropdown-menu' >
-                                    <li><a href="#a" className='dropdown-item'>USD</a></li>
-                                    <li><a href="#a" className='dropdown-item'>EUR</a></li>
-                                    <li><a href="#a" className='dropdown-item'>UAH</a></li>
-                                </ul>
-                            </div>
+                        <div className="col-lg-2 col-md-2 col-sm-12 mt-sm-1 mt-lg-0 mt-md-0 panel-cur d-flex gap-3">
+                            <p className='cur-title'>Currencies:</p>
+                            <DropDown />
                         </div>
                         <div className="col-lg-2 col-md-0 col-sm-0 "></div>
-                        <div className="col-lg-3 col-md-12 mt-md-2 mt-sm-1 col-sm-12 panel-tel">
+                        <div className="col-lg-3 mt-lg-0 col-md-12 mt-md-0 mt-sm-1 col-sm-12 panel-tel">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 512 512"
                                  className='icon-tel'
@@ -68,3 +63,50 @@ function LogPanel(props){
 }
 
 export default LogPanel;
+
+export const DropDown = function (){
+    let dropbtn = useRef();
+    let menu = useRef();
+    const [clicked, Setclicked] = useState(false);
+    const ButtonHandler = function(){
+        console.log(dropbtn.current.children);
+        if(clicked === false){
+            menu.current.classList.add('active');
+            Setclicked(!clicked);
+        }
+        else{
+            menu.current.classList.remove('active');
+            Setclicked(!clicked);
+        }
+    }
+    return(
+        <CurContext.Consumer>
+            {
+                (value) =>{
+                    return(
+                    <div className="dropdown d-flex">
+                        <button ref={dropbtn} onClick={ButtonHandler} data-target='cur' className='btn dropdown-btn dropdown-toggle p-0 align-self-center'>{value.cur}</button>
+                        <ul ref={menu} data-target='cur' className='dropdown-menu' >
+                            <li onClick={()=>{
+                                value.update('USD');
+                                menu.current.classList.remove('active');
+                                Setclicked(!clicked);
+                            }} className='dropdown-item'>USD</li>
+                            <li onClick={()=>{
+                                value.update('EUR');
+                                menu.current.classList.remove('active');
+                                Setclicked(!clicked);
+                            }} className='dropdown-item'>EUR</li>
+                            <li onClick={()=>{
+                                value.update('GPB');
+                                menu.current.classList.remove('active');
+                                Setclicked(!clicked);
+                            }} className='dropdown-item'>GPB</li>
+                        </ul>
+                    </div>
+                    );
+                }
+            }
+        </CurContext.Consumer>
+    );
+} 
