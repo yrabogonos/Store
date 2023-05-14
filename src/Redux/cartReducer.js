@@ -10,7 +10,6 @@ let initialState =  {
     ],
 }
 
-
 const cartReducer = (state = initialState, action) => {
 
     function contains(item){

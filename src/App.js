@@ -17,6 +17,8 @@ import SpecialtyTools from './Components/Speciality/spec';
 import { useState } from 'react';
 import React from 'react';
 import { ContactUs } from './Components/ContactUs/contactus';
+import Aside from './Components/Main/Aside/aside';
+import Checkout from './Components/Checkout/checkout';
 
 export const CurContext = React.createContext();
 function App() {
@@ -132,9 +134,14 @@ function App() {
               <ProductsDetails />
           }></Route> 
 
+          <Route path='/checkout' element={ 
+            <Checkout />
+          }></Route>
+
           <Route path='/' element={ 
             <Main />
           }></Route>
+          
         </Routes>
         <ContactUs />
         <Footer />

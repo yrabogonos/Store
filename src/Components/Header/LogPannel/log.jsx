@@ -3,33 +3,11 @@ import './log.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../scripts/dropdown';
 import { CurContext } from '../../../App';
+import { Link } from 'react-router-dom';
 
 
 
 function LogPanel(props){
-    // useEffect(()=>{
-    //     document.querySelectorAll('.dropdown-btn').forEach(btn => btn.addEventListener('click', (e) =>{
-    //         var target = e.currentTarget;
-    //         var menu = target.dataset.target; 
-    //         document.querySelectorAll('.dropdown-menu').forEach(e =>{
-    //             if(e.dataset.target == menu && !e.classList.contains('open')){
-    //                 e.classList.add('active');
-    //                 var id = setTimeout(()=> e.classList.add('open'), 0)
-               
-    //             }
-    //             if(e.dataset.target == menu && e.classList.contains('open')){
-    //                 e.classList.remove('active');
-    //                 clearTimeout(id);
-    //                 setTimeout(()=> e.classList.remove('open'), 0)
-                    
-    //             }
-    //         });
-            
-          
-    //     }));
-    // });
-
-    
     return(
         <section className='logPanel'>
             <div className='logPanel-wrap bg-dark'>
@@ -38,7 +16,7 @@ function LogPanel(props){
                         <div className="col-lg-4 col-md-6 col-sm-12 panel-links pr-2">
                             <a href="#a">log in</a>
                             <a href="#a">create an account</a>
-                            <a href="#a">check out</a>
+                            <Link to='/checkout'>check out</Link>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-12 mt-sm-1 mt-lg-0 mt-md-0 panel-cur d-flex gap-3">
                             <p className='cur-title'>Currencies:</p>
@@ -69,7 +47,6 @@ export const DropDown = function (){
     let menu = useRef();
     const [clicked, Setclicked] = useState(false);
     const ButtonHandler = function(){
-        console.log(dropbtn.current.children);
         if(clicked === false){
             menu.current.classList.add('active');
             Setclicked(!clicked);

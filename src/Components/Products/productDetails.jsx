@@ -67,7 +67,11 @@ function ProductsDetails(props){
                                                             <p className='descr-price'>{(product.price * value.translate(value.cur).m).toFixed(2)} {value.translate(value.cur).sign}</p>
                                                             <div className="descr-ctrls">
                                                                 <p className='m-0'>Qty</p>
-                                                                <input ref={input} defaultValue={1} type="number" id="quantity" name="quantity"  class="form-control input-small descr-input"></input>
+                                                                <input ref={input} defaultValue={1} type="number" id="quantity" name="quantity"  class="form-control input-small descr-input" onChange={(e)=>{
+                                                                    if(e.target.value < 1){
+                                                                        e.target.value = 1;
+                                                                    }
+                                                                }}></input>
                                                                 <button class="btn fcard-btn descr-btn p-0" type="submit" onClick={()=>{
                                                                     let item ={
                                                                         title:product.title,

@@ -14,7 +14,6 @@ export default function BucketContainer(){
         {
             (store) =>{
                 let state = store.getState();
-                console.log(state);
                 let remItem = (item) => {
                     store.dispatch(removeItemActionCreator(item));
                 }

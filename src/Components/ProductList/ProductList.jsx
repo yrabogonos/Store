@@ -36,6 +36,8 @@ function ProductList(props){
           {
               (store) =>{
                   let state = store.getState();
+                  state.tools.items = products;
+                  state.tools.setItems = SetProducts;
                   let addItem = (item) => {
                       store.dispatch(addItemActionCreator(item));
                   }
