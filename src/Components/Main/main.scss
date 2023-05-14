@@ -1,0 +1,14 @@
+.main{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 35px;
+        background: #191919
+    }
+    
+}
+
