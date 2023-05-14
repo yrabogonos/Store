@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Store/static/css/main.453d7fdd.css",
-    "main.js": "/Store/static/js/main.3a2af40e.js",
+    "main.css": "/Store/static/css/main.21cfe629.css",
+    "main.js": "/Store/static/js/main.a2d440a7.js",
     "static/js/787.884e199e.chunk.js": "/Store/static/js/787.884e199e.chunk.js",
     "static/media/slide1.webp": "/Store/static/media/slide1.d2190bf44d87c0ec87b9.webp",
     "static/media/slide2.webp": "/Store/static/media/slide2.eefee7c5e1ded92d1ece.webp",
     "static/media/slide3.webp": "/Store/static/media/slide3.68a6d7864dd040d25d70.webp",
     "static/media/apollo_precision_tools_dt9706p_39-piece_pink_general_tool_set_3_6499b9f2-0a47-4cab-bb46-b72b159f0aee_medium.avif": "/Store/static/media/apollo_precision_tools_dt9706p_39-piece_pink_general_tool_set_3_6499b9f2-0a47-4cab-bb46-b72b159f0aee_medium.858b062039d54fe65b80.avif",
+    "static/media/remove.png": "/Store/static/media/remove.3c662b752278fc52f408.png",
     "static/media/powertools.avif": "/Store/static/media/powertools.21ee327626f562a0a038.avif",
     "static/media/link6.avif": "/Store/static/media/link6.c566bd1bda404371001e.avif",
     "static/media/f2.avif": "/Store/static/media/f2.713826760b650d77d686.avif",
@@ -24,12 +25,12 @@
     "static/media/dewalt_dw920k-2_2_medium.avif": "/Store/static/media/dewalt_dw920k-2_2_medium.7ea711b845b0ae92c437.avif",
     "static/media/f1.avif": "/Store/static/media/f1.9b7003bad602d73679f2.avif",
     "index.html": "/Store/index.html",
-    "main.453d7fdd.css.map": "/Store/static/css/main.453d7fdd.css.map",
-    "main.3a2af40e.js.map": "/Store/static/js/main.3a2af40e.js.map",
+    "main.21cfe629.css.map": "/Store/static/css/main.21cfe629.css.map",
+    "main.a2d440a7.js.map": "/Store/static/js/main.a2d440a7.js.map",
     "787.884e199e.chunk.js.map": "/Store/static/js/787.884e199e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.453d7fdd.css",
-    "static/js/main.3a2af40e.js"
+    "static/css/main.21cfe629.css",
+    "static/js/main.a2d440a7.js"
   ]
 }
