@@ -1,5 +1,6 @@
 import React from 'react';
 import './imlink.scss';
+import { Link } from 'react-router-dom';
 
 
 
@@ -7,10 +8,10 @@ import './imlink.scss';
 
 function ImLink(props){
     return(
-        <a href='#f' className='ImLink'>
+        <Link to={props.path} className='ImLink'>
             <img src={props.src} className='ImLink-img img-fluid' alt="t" />
             <h3 className='ImLink-title'>{props.title}</h3>
-        </a>
+        </Link>
     );
 }
 

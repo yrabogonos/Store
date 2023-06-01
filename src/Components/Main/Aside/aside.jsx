@@ -9,15 +9,15 @@ function Aside(props){
             <div className="aside-wrap">
                <h2 className='category-name'>Categories</h2>
                <ul className='aside-cat p-0'>
-                    <Link to={'/baretools'}><li>Bare tools</li></Link>
-                    <Link to={'/dustcollectors'}><li>Dust collectors</li></Link>
-                    <Link to={'/electriciantools'}><li>electrician tools</li></Link>
-                    <Link to={'/handtools'}><li>hand tools</li></Link>
+                    <Link to={'/bare-tools'}><li>Bare tools</li></Link>
+                    <Link to={'/dust-collectors'}><li>Dust collectors</li></Link>
+                    <Link to={'/electrician-tools'}><li>electrician tools</li></Link>
+                    <Link to={'/hand-tools'}><li>hand tools</li></Link>
                     <Link to={'/lasers'}><li>lasers</li></Link>
-                    <Link to={'/plumbingtools'}><li>plumbing tools</li></Link>
-                    <Link to={'/powertools'}><li>power tools</li></Link>
-                    <Link to={'/safetyequipment'}><li>safety equipment</li></Link>
-                    <Link to={'/specialitytools'}><li>speciality tools</li></Link>
+                    <Link to={'/plumbing-tools'}><li>plumbing tools</li></Link>
+                    <Link to={'/power-tools'}><li>power tools</li></Link>
+                    <Link to={'/safety-equipment'}><li>safety equipment</li></Link>
+                    <Link to={'/speciality-tools'}><li>speciality tools</li></Link>
                </ul>
             </div>
         </aside>

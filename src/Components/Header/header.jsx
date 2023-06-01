@@ -68,10 +68,27 @@ function Header(props){
                                                             <a href="#f">documentation</a>
                                                             <a href="#f">contact us</a>
                                                         </div>
-                                                        <select name="control-select" className='d-none' id="selMobile">
-                                                                <option value="1"><a href="#f">Home</a></option>
-                                                                <option value="2"><a href="#f">Categories</a></option>
-                                                                <option value="2"><a href="#f">- Power tools</a></option>
+                                                        <select name="control-select" className='d-none' id="selMobile" onChange={(e)=>{
+                                                            const select = e.target;
+                                                            let selectedOption = select.options[select.selectedIndex];
+                                                            window.location.href = '';
+                                                            window.location.href = selectedOption.value;
+                                                            select.value = selectedOption.value;
+                                                            
+                                                           
+
+                                                        }}>
+            
+                                                                <option><a href="#f">Categories</a></option>
+                                                                <option value="/Store/bare-tools">- Bare tools</option>
+                                                                <option value="/Store/dust-collectors">- Dust Collectors</option>
+                                                                <option value="/Store/electrician-tools">- Electrician tools</option>
+                                                                <option value="/Store/hand-tools">- Hand tools</option>
+                                                                <option value="/Store/lasers">- Lasers</option>
+                                                                <option value="/Store/plumbing-tools">- Plumbing tools</option>
+                                                                <option value="/Store/power-tools">- Power tools</option>
+                                                                <option value="/Store/safety-equipment">- Safety Equipment</option>
+                                                                <option value="/Store/speciality-tools">- Speciality tools</option>
                                                                 <option value="3"><a href="#f">About us</a></option>
                                                                 <option value="4"><a href="#f">Blog</a></option>
                                                                 <option value="5"><a href="#f">Documentation</a></option>

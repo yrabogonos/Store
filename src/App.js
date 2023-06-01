@@ -61,36 +61,36 @@ function App() {
             <ProductsDetails />
           }></Route> 
 
-          <Route path='/baretools' element={ 
+          <Route path='/bare-tools' element={ 
             <BareTools />
           }>
           </Route>
 
-          <Route path='/baretools/:productId' element={ 
+          <Route path='/bare-tools/:productId' element={ 
                 <ProductsDetails />
           }></Route> 
 
-          <Route path='/dustcollectors' element={ 
+          <Route path='/dust-collectors' element={ 
             <DustCollectors />
           }></Route>
 
-          <Route path='/dustcollectors/:productId' element={ 
+          <Route path='/dust-collectors/:productId' element={ 
                 <ProductsDetails />
           }></Route> 
 
-          <Route path='/electriciantools' element={ 
+          <Route path='/electrician-tools' element={ 
             <ElTools />
           }></Route>
 
-          <Route path='/electriciantools/:productId' element={ 
+          <Route path='/electrician-tools/:productId' element={ 
               <ProductsDetails />
           }></Route> 
 
-          <Route path='/handtools' element={ 
+          <Route path='/hand-tools' element={ 
             <HandTools />
           }></Route>
 
-          <Route path='/handtools/:productId' element={ 
+          <Route path='/hand-tools/:productId' element={ 
               <ProductsDetails />
           }></Route> 
 
@@ -102,35 +102,35 @@ function App() {
               <ProductsDetails />
           }></Route> 
 
-          <Route path='/plumbingtools' element={ 
+          <Route path='/plumbing-tools' element={ 
             <PlumbingTools />
           }></Route>
 
-          <Route path='/plumbingtools/:productId' element={ 
+          <Route path='/plumbing-tools/:productId' element={ 
               <ProductsDetails />
           }></Route> 
 
-          <Route path='/powertools' element={ 
+          <Route path='/power-tools' element={ 
             <PowerTools />
           }></Route>
 
-          <Route path='/powertools:productId' element={ 
+          <Route path='/power-tools:productId' element={ 
               <ProductsDetails />
           }></Route> 
 
-          <Route path='/safetyequipment' element={ 
+          <Route path='/safety-equipment' element={ 
             <Safety />
           }></Route>
 
-          <Route path='/safetyequipment:productId' element={ 
+          <Route path='/safety-equipment:productId' element={ 
               <ProductsDetails />
           }></Route> 
   
-          <Route path='/specialitytools' element={ 
+          <Route path='/speciality-tools' element={ 
             <SpecialtyTools />
           }></Route>
 
-          <Route path='/specialitytools:productId' element={ 
+          <Route path='/speciality-tools:productId' element={ 
               <ProductsDetails />
           }></Route> 
 

@@ -18,11 +18,15 @@ export default function BreadCrumbs(){
             objs.push({path:'/', crumb:crumbName});
         }
         else{
-            curr +=`/${crumb}`;
+            if(crumb.includes('-')){
+                crumb = crumb.replace('-', ' ');
+            }
+            curr +=`/${crumb.replace(' ','-')}`;
             crumbName = crumb;
             objs.push({path:curr, crumb:crumbName});
         } 
     })
+    console.log('Path:', objs)
    
   
 
